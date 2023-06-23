@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "finances-native",
+    "slug": "finances-native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "finances-native"
+}
