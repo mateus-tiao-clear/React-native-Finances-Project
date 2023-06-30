@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/drawer";
 import Home from "../../pages/Home";
 import Profile from "../../pages/Pages";
 import New from "../../pages/New";
+import CustomDrawer from "../components/CustomDrawer";
 
 const AppDrawer = createStackNavigator()
 
