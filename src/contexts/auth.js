@@ -9,14 +9,19 @@ function AuthProvider({ children }){
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    useEffect(async () => {
-        const storageUser = await AsyncStorage.getItem("user")
+    useEffect(() => {
+      async function getUser(){
+          const storageUser = await AsyncStorage.getItem("user")
 
         if(storageUser){
             setUser(JSON.parse(storageUser))
         }   
 
         setLoading(false)
+
+      }
+
+      getUser()
     }, [])
 
     async function signIn(email, password){
