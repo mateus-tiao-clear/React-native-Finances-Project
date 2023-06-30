@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import "react-native-gesture-handler"
 
+import firebase from "./src/services/firebaseConnection"
 import Routes from './src/config/routes';
 import { NavigationContainer } from '@react-navigation/native';
 import AuthProvider from './src/contexts/auth';
