@@ -8,7 +8,11 @@ export default function SignUp(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const { user } = useContext(AuthContext)
+    const { signUp } = useContext(AuthContext)
+
+    function handleSignUp(){
+      signUp(email, password, nome)    
+  }
 
     return (
         <Background>
@@ -25,7 +29,7 @@ export default function SignUp(){
                     <Input placeholder="Senha" autoCorrect={false} autoCapitalize="none" value={password} onChangeText={(text) => setPassword(text)}/>
                 </AreaInput>
 
-                <SubmitButton>
+                <SubmitButton onPress={handleSignUp}>
                     <SubmitText>Cadastrar</SubmitText>
                 </SubmitButton>
             </Container>
